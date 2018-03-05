@@ -40,7 +40,7 @@ app.use(function(req, res, next) {
 	res.status(404);
 	res.send({
 		"success" : 0,
-		"message" : 'Please Check the URL'
+		"message" : 'Please Check the url'
 	});
 });
 
