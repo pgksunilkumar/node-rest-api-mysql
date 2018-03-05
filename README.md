@@ -7,7 +7,7 @@ This is a simple REST API with node and express with mysql Database
 
 ##To setup a DB file first
 
-```javascript
+```
 db.port = 9686;
 
 //Authentication
@@ -37,7 +37,7 @@ POST http://localhost:9686/api/database_table
 }
 ```
 - If parameters are missing :
-```json
+```
 {
   "success": 0,
   "message": "Parameters missing"
@@ -60,14 +60,14 @@ GET http://localhost:9686/api/database_table/<% -inserted_id- %>
 ```
 **Response**
 - If data exsists :
-```json
+```
 {
   "success": 1,
   "data": "..."
 }
 ```
 - If data missing :
-```json
+```
 {
   "success": 0,
   "message": "No rows found"
