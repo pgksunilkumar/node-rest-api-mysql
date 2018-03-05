@@ -7,7 +7,7 @@ This is a simple REST API with node and express with mysql Database
 
 ##To setup a DB file first
 
-```
+```javascript
 db.port = 9686;
 
 //Authentication
@@ -29,6 +29,21 @@ Create a new entry in the table with the parameters that are posted.
 POST http://localhost:9686/api/database_table
 ```
 
+- If the row is created Successfully:
+```json
+{
+  "success": 1,
+  "id": inserted_id
+}
+```
+- If parameters are missing :
+```json
+{
+  "success": 0,
+  "message": "Parameters missing"
+}
+```
+
 
 ##GET all values in Table (GET)
 
@@ -37,3 +52,64 @@ Read Entire Table.
 ```
 GET http://localhost:9686/api/database_table
 ```
+
+Read Table by Particular Inserted ID.
+
+```
+GET http://localhost:9686/api/database_table/<% -inserted_id- %>
+```
+**Response**
+- If data exsists :
+```json
+{
+  "success": 1,
+  "data": "..."
+}
+```
+- If data missing :
+```json
+{
+  "success": 0,
+  "message": "No rows found"
+}
+```
+
+
+
+##Update (PUT)
+Update an entry in the table with the parameters that are put.
+
+```
+PUT http://localhost:9686/api/database_table/<% -inserted_id- %>
+```
+**Response**
+- If the row is updated Successfully:
+```json
+{
+  "success": 1,
+  "message": "Updated"
+}
+```
+- If parameters are missing :
+```json
+{
+  "success": 0,
+  "message": "Parameters missing"
+}
+```
+
+##Delete (DELETE)
+Delete an entry in the table.
+
+```
+DELETE http://localhost:9686/api/database_table/<% -inserted_id- %>
+```
+**Response**
+- If the row is deleted Successfully:
+```json
+{
+  "success": 1,
+  "message": "Deleted"
+}
+```
+
