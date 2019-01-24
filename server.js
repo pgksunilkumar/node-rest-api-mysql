@@ -45,8 +45,10 @@ app.use(function(req, res, next) {
 });
 
 var server = app.listen(db.port, function () {
+	
 	var host = server.address().address;
 	var port = server.address().port;
+	console.log(host);
 	console.log(db.port);
 	console.log('Server listening at http://%s:%s', host, port);
 });

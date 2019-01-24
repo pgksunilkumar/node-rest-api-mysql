@@ -8,6 +8,7 @@ db.auth = false;
 //Database
 db.database = 'test';
 db.username = 'root';
+db.port = '9696';
 db.password = '';
 db.table_prefix = '';
 
