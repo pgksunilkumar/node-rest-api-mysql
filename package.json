@@ -5,7 +5,7 @@
     "main": "server.js",
     "dependencies": {
         "express": "~4.0.0",
-        "sequelize": "~3.6.0",
+        "sequelize": "~6.3.5",
         "mysql": "~2.9.0",
         "body-parser": "~1.0.1",
         "http-auth": "~2.2.8"
